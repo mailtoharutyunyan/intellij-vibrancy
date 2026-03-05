@@ -1,0 +1,46 @@
+<idea-plugin>
+    <id>com.vibrancy.plugin</id>
+    <name>macOS Vibrancy</name>
+    <vendor url="https://github.com/arayikharutyunyan">Arayik Harutyunyan</vendor>
+
+    <description><![CDATA[
+        <p>Adds native macOS vibrancy (frosted glass) transparency to the IntelliJ IDE window
+        using AppKit's <code>NSVisualEffectView</code>.</p>
+
+        <h3>Features</h3>
+        <ul>
+            <li>7 built-in vibrancy themes (dark, light, glass, noir, and more)</li>
+            <li>Custom mode with configurable material, intensity, and appearance</li>
+            <li>Liquid Glass support on macOS Tahoe (26+)</li>
+            <li>Live preview — changes apply instantly from Settings</li>
+        </ul>
+
+        <h3>Usage</h3>
+        <p>Go to <b>Settings → Appearance → Vibrancy</b> to choose a theme
+        or configure custom settings.</p>
+
+        <p><em>macOS only. Requires IntelliJ IDEA 2024.3 or later.</em></p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>1.0.0</h3>
+        <ul>
+            <li>Initial release</li>
+            <li>7 built-in vibrancy themes with live preview</li>
+            <li>Custom mode: material, intensity, and appearance controls</li>
+            <li>Liquid Glass support for macOS Tahoe</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.vibrancy.VibrancyProjectActivity"/>
+        <applicationService serviceImplementation="com.vibrancy.settings.VibrancySettings"/>
+        <applicationConfigurable
+                parentId="appearance"
+                implementation="com.vibrancy.settings.VibrancyConfigurable"
+                id="com.vibrancy.settings.VibrancyConfigurable"
+                displayName="Vibrancy"/>
+    </extensions>
+</idea-plugin>

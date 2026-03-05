@@ -1,0 +1,9 @@
+.gradle/
+.idea/
+.intellijPlatform/
+build/
+gradle-8.5/
+gradle.zip
+*.iml
+out/
+.DS_Store
