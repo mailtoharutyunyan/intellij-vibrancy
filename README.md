@@ -6,6 +6,10 @@ Native macOS vibrancy (frosted glass transparency) and Liquid Glass effects for 
 ![JetBrains IntelliJ](https://img.shields.io/badge/IntelliJ-2024.3%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
+<p align="center">
+  <img src="screenshots/image.jpg" alt="Vibrancy effect in IntelliJ IDEA" width="800">
+</p>
+
 ## Features
 
 - **Native vibrancy** — injects `NSVisualEffectView` behind the Java content view for real macOS blur
@@ -51,6 +55,10 @@ Native macOS vibrancy (frosted glass transparency) and Liquid Glass effects for 
 | Custom | User-defined | User-defined | User-defined | Full manual control over material, intensity, and appearance |
 
 ### Custom Mode
+
+<p align="center">
+  <img src="screenshots/settings.jpg" alt="Vibrancy settings panel" width="600">
+</p>
 
 When the **Custom** theme is selected, the following controls appear:
 
